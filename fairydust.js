@@ -47,10 +47,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     }
   }
   
-  function onMouseMove(e) {    
+  function onMouseMove(e) {
     cursor.x = e.clientX;
     cursor.y = e.clientY;
-    
+    console.log( 'see mouse moved' )
     addParticle( cursor.x, cursor.y, possibleColors[Math.floor(Math.random()*possibleColors.length)]);
   }
   
@@ -117,7 +117,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       applyProperties(this.element, this.initialStyles);
       this.update();
       
-      document.body.appendChild(this.element);
+      // document.body.appendChild(this.element);
+      document.getElementById("effects_overlay").appendChild(this.element)
     };
     
     this.update = function() {

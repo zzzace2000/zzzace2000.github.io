@@ -1,0 +1,24 @@
+
+
+
+fonts:
+ransom note / comic sans
+Arial / helvetica
+
+<link href="https://fonts.googleapis.com/css?family=Coming+Soon|Noto+Sans+TC|Open+Sans&display=swap" rel="stylesheet">
+
+font-family: 'Open Sans', sans-serif;
+font-family: 'Coming Soon', cursive;
+font-family: 'Noto Sans TC', sans-serif;
+
+images:
+
+
+var range-selector= $("")
+    .css("position", "absolute").addClass("range-selector")
+    .appendTo("")
+    .click(function(e) {
+        _range-selector.hide();
+
+        $(document.elementFromPoint(e.clientX,e.clientY)).trigger("click");
+    });

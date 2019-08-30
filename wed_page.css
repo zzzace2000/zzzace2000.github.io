@@ -1,0 +1,133 @@
+html, body {
+    margin: 0px;
+    height: 100%;
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Coming Soon', cursive;
+    /*font-family: 'Noto Sans TC', sans-serif;*/
+}
+.scrollitem {
+     margin-left: auto;
+     margin-right: auto;
+     max-width:660;
+}
+.CNtextbox {
+    text-align:center;
+    font-family: 'Noto Sans TC', sans-serif;   
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+h1 {  
+    font-size: 20px;  
+}  
+p {  
+    color: green;
+}  
+div {  
+    margin: 10px;  
+}
+
+.noScrollHeader {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: white;
+    height: 200px;
+}
+@media only screen and (max-width: 600px) {
+    .noScrollHeader {
+        position: relative;
+    }
+}
+
+/*.noScrollHeader + .scrollcontainer {
+  padding-top: 2px;
+}*/
+.scrollcontainer {
+  padding-top: 2px;
+}
+
+
+#headLogo {
+ display: block;
+ max-width: 350;
+ width: 80%;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+
+
+
+
+/*by class*/
+.container {  
+    margin: 10px;  
+}
+
+/*by id*/
+#effects_overlay {
+    /*allows clicking behind*/
+    pointer-events: none;
+    /*background-color: lightblue;*/
+    /*border-style: dotted;*/
+    z-index: 100;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
+    min-height: 100%; 
+}
+<!--[if IE 9]>
+    #container {
+        height: 100%;
+    }
+<![endif]-->
+
+/*
+
+img:active {
+  animation: bounce 0.5s;
+  animation-iteration-count: infinite;
+}
+*/
+img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg) scale(0.8); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+@keyframes bounce {
+  0%  { transform: scale(1); }
+/*  10% { transform: scale(1, 0.75) }
+  20% { transform: scale(1, 0.85) }
+  30% { transform: scale(1, 1) }
+  40% { transform: scale(1, 1.07) }
+  50% { transform: scale(1, 1.1) }
+  60% { transform: scale(1, 1.07) }
+  70% { transform: scale(1, 1) }
+  80% { transform: scale(1, 0.9) }
+  90% { transform: scale(1, 0.9) }
+  100% { transform: scale(1, 1) }*/
+  50% { transform: scale(0.8); }
+  100% { transform: scale(1); }
+}

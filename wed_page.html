@@ -1,8 +1,7 @@
-
 <!-- 恭喜你﹐這裡什麼都沒有 -->
 
 <head>
-    <meta charset="utf-8"> 
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Noto+Sans+TC|Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="wed_page.css">  
@@ -10,22 +9,26 @@
 
 
 
+<audio id="pika" src="assets/pika.wav" ></audio>
 <script>
 function animal_react()
 {
     var audio = document.getElementById("pika");
-    audio.volume = 1.0; 
+    audio.volume = 1.0;
     audio.play();
 }
 </script>
-<audio id="pika" src="assets/pika.wav" ></audio>
+
 
 
 <body>
 <div id="effects_overlay"></div>
 
-<div class="noScrollHeader"> 
-    <img id="headLogo" src="assets/WeddingLogo.png" alt="(^_^)" onclick="animal_react()">
+<div class="noScrollHeader">
+    <div id="headerpic">
+        <img id="chick" src="assets/WeddingLogo_chick.png" alt="(^_^)" onclick="animal_react()">
+        <img id="fox" src="assets/WeddingLogo_fox.png" alt="(^_^)" onclick="animal_react()">
+    </div>
 </div>
 <div class="scrollcontainer">
     <div class="scrollitem" id="about">
