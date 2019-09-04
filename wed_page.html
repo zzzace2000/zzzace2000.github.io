@@ -5,15 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Noto+Sans+TC|Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="wed_page.css">
-</head>
+    <link rel="icon" href="assets/favicon.ico" />
+    <title> 恭喜 恭喜 </title>
 
-<audio id="pika1" src="assets/pika_raw_1.wav" ></audio>
-<audio id="pika2" src="assets/pika_raw_2.wav" ></audio>
-<audio id="pika3" src="assets/pika_raw_3.wav" ></audio>
-
-<script>
-function animal_react()
-{
+    <script>
+    function animal_react()
+    {
     var audio = document.getElementById("pika" + Math.floor(Math.random()*3 + 1));
     audio.volume = 1.0;
     audio.play();
@@ -30,10 +27,14 @@ function animal_react()
     animal_element.classList.add("bounce");
 
     // powerUp();
-}
-</script>
-
+    }
+    </script>
+</head>
 <body>
+<audio id="pika1" src="assets/pika_raw_1.wav" ></audio>
+<audio id="pika2" src="assets/pika_raw_2.wav" ></audio>
+<audio id="pika3" src="assets/pika_raw_3.wav" ></audio>
+
 <div id="effects_overlay"></div>
 <div class="noScrollHeader">
     <div class="navbarBackBox">
@@ -64,7 +65,7 @@ function animal_react()
         </div>
     </div>
     <div class="scrollitem" id="registration">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdlT2j5VZ47c87a6ZGCckA0iQjjjdONU17BjweiW4MXwszFug/viewform?embedded=true" width=100% max-width="640" height="860" frameborder="0" marginheight="0" marginwidth="0" scrolling="no">Loading...</iframe>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdlT2j5VZ47c87a6ZGCckA0iQjjjdONU17BjweiW4MXwszFug/viewform?embedded=true" width="100%" max-width="640" height="860" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
     </div>
     <div class="scrollitem" id="moreInfo">
         <img id="med_polar_pic" src="assets/photo.jpg" alt="(・ω<)">

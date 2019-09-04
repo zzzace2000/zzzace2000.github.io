@@ -113,6 +113,7 @@ img {
   }
   .nav-item {
     display: inline-block;
+    z-index:-1;
     vertical-align: bottom;
   }
   .nav-item a {
