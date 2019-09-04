@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -47,8 +48,107 @@
     </div>
 
 
+<!--     <div class="compositeImage" id="headerCompImg"> <div>
+        <div class="compImgPiece compositeImage" id="header-chick" onclick="animal_react()">
+            <img class="compImgPiece" id="header-chick-bud" src="assets/WeddingLogo_bud_crop.png" alt=" v ">
+            <img class="compImgPiece" id="header-chick-body" src="assets/WeddingLogo_chick_crop.png" alt="(^_^)">
+        </div>
+        <img class="compImgPiece" id="header-fox" src="assets/WeddingLogo_fox_crop.png" alt="(O_O)" onclick="animal_react()">
+    </div> </div> 
+
+/*.noScrollHeader + .scrollcontainer {
+  padding-top: 2px;
+}*/
+.scrollcontainer {
+  padding-top: 2px;
+}
+
+
+#headLogo {
+ display: block;
+ max-width: 350;
+ width: 80%;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+/*Composite Images and specifics for */
+.compositeImage {
+  position:relative;
+  display: block;
+  background-color: blue;
+}
+
+.compositeImage > div { 
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+}
+
+.compImgPiece {
+  position:absolute;
+}
+
+#headerCompImg {
+  max-width: 350;
+  width: 80%;
+  max-height:;
+  padding-top: 75%; /*maintain aspect ration*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#header-chick {
+  height:100%;
+  width:50%;
+}
+
+#header-chick-bud {
+  height:10%;
+}
+
+#header-chick-body {
+  top:10%;
+  height:90%;
+}
+
+#header-fox {
+  width:50%;
+  left:50%;
+}
+-->
+
 
 
   <script type="text/javascript" src="fairydust.js"></script>
   </body>
 </html>
+
+
+
+/*by id*/
+#effects_overlay {
+    /*allows clicking behind*/
+    pointer-events: none;
+    /*background-color: lightblue;*/
+    /*border-style: dotted;*/
+    z-index: 100;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom:0;
+    right:0;
+    height:100%;
+    width:100%;
+    min-height: 100%; 
+}
+<!--[if IE 9]>
+    #container {
+        height: 100%;
+    }
+<![endif]-->
+
+<!-- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdlT2j5VZ47c87a6ZGCckA0iQjjjdONU17BjweiW4MXwszFug/viewform?embedded=true" frameborder="0" style="overflow:hidden;height:100%;width:100%" height="100%" width="100%" scrolling="no">Loading Google Form... Why do you hate iframes?</iframe> -->
+
+<!-- 
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vTnua35hKMuDCH9XEPdpsGlNHsWINq-J-dmZPqnsR4ycdhBic96jTrmtikj-zPbiu-k55x05TuuMqBl/pub?embedded=true"></iframe>
+ -->
