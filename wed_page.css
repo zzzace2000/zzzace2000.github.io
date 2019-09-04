@@ -158,10 +158,10 @@ img {
 }
 
 
-/*#headerImg:active {
-  animation: bounce 0.5s;
-  animation-iteration-count: 1;
-}*/
+.footerCopy {
+  color: gray;
+  font-size: 8;
+}
 
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
