@@ -7,22 +7,29 @@
     <link rel="stylesheet" href="wed_page.css">
 </head>
 
+<audio id="pika1" src="assets/pika_raw_1.wav" ></audio>
+<audio id="pika2" src="assets/pika_raw_2.wav" ></audio>
+<audio id="pika3" src="assets/pika_raw_3.wav" ></audio>
 
-
-<audio id="pika" src="assets/pika.wav" ></audio>
 <script>
 function animal_react()
 {
-    var audio = document.getElementById("pika");
+    var audio = document.getElementById("pika" + Math.floor(Math.random()*3 + 1));
     audio.volume = 1.0;
     audio.play();
+    var animal_element = 0;
 
-    animal_element = document.getElementById("headerImg")
+    animal_element = document.getElementById("inlineHeaderImg");
+    var animal_element_display = animal_element.currentStyle ? animal_element.currentStyle.display : getComputedStyle(animal_element, null).display;
+    if (animal_element_display === 'none'){
+        animal_element = document.getElementById("aboveHeaderImg");
+    }
+
     animal_element.classList.remove('bounce');
     void animal_element.offsetWidth; //hack triggers reflow, wiping animation count
     animal_element.classList.add("bounce");
 
-    powerUp();
+    // powerUp();
 }
 </script>
 
@@ -30,10 +37,11 @@ function animal_react()
 <div id="effects_overlay"></div>
 <div class="noScrollHeader">
     <div class="navbarBackBox">
+        <img id="aboveHeaderImg" src="assets/WeddingLogo_crop.png" alt="(^_^)(O_O)" onclick="animal_react()">
         <ul class="navbar">
             <li class="nav-item"><a href="#top">Top</a></li>
             <li class="nav-item"><a href="#about">About</a></li>
-            <li class="nav-item"><img id="headerImg" src="assets/WeddingLogo_crop.png" alt="(^_^)(O_O)" onclick="animal_react()"></li>
+            <li class="nav-item"><img id="inlineHeaderImg" src="assets/WeddingLogo_crop.png" alt="(^_^)(O_O)" onclick="animal_react()"></li>
             <li class="nav-item"><a href="#registration">Registration</a></li>
             <li class="nav-item"><a href="#moreInfo">More Info</a></li>
         </ul>

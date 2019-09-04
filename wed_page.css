@@ -14,15 +14,9 @@ html, body {
     font-family: 'Noto Sans TC', sans-serif;   
 }
 
-h1 {  
-    font-size: 20px;  
-}  
-p {  
+p {
     color: green;
 }
-
-
-
 
 /*
 
@@ -36,7 +30,7 @@ img:active {
 /*.scrollcontainer {
   border-style: solid;
   border-width: 5px;
-  border-color: red; 
+  border-color: red;
   background: red;
 }
 .scrollitem {
@@ -54,7 +48,7 @@ img:active {
   border-style: solid;
   border-width: 1px;
   border-color: green;
-  height: 100%;   
+  height: 100%;
   float: left;
 }
 .rightfield {
@@ -94,6 +88,7 @@ img {
   }
   /*Create Background navbarBackBox*/
   .navbarBackBox {
+    pointer-events: auto; /*cover up events: none;*/
     background-color: white;
     padding: 3px;
   }
@@ -103,7 +98,7 @@ img {
     height: 5vh;
     /*max-height:50;*/
   }
-  #headerImg {
+  #inlineHeaderImg {
     float:left;
     display: block;
     height: 15vh;
@@ -112,9 +107,9 @@ img {
   .navbar {
     display: inline-block;
     list-style-type: none;
-    pointer-events: auto; /*cover up events: none;*/
     margin: 0;
     padding: 0;
+    white-space:nowrap;
   }
   .nav-item {
     display: inline-block;
@@ -140,6 +135,19 @@ img {
 @media only screen and (max-height: 600px) {
     .noScrollHeader {
         position: relative;
+    }
+}
+
+#aboveHeaderImg {
+    height: 12vh;
+    display: none;
+}
+@media only screen and (max-width: 430px) {
+    #inlineHeaderImg {
+        display: none;
+    }
+    #aboveHeaderImg {
+        display: block;
     }
 }
 
