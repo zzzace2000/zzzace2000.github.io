@@ -25,7 +25,6 @@
     animal_element.classList.remove('bounce');
     void animal_element.offsetWidth; //hack triggers reflow, wiping animation count
     animal_element.classList.add("bounce");
-
     // powerUp();
     }
     function topFunction() {
@@ -33,7 +32,17 @@
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     } 
 
-    </script>
+    function resizeIFrame( frameName ) {
+        var iFrame = document.getElementById( frameName );
+        // iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
+        // iFrame.height = iFrame.contentWindow.document.body.Height;
+        console.log(iFrame.contentWindow.document.body.scrollHeight);
+        console.log(iFrame.contentWindow.document.body.offsetHeight);
+        console.log(iFrame.contentWindow.document.documentElement.scrollHeight);
+        console.log(iFrame.contentWindow.document.documentElement.offsetHeight);
+    }
+
+    </script> 
 </head>
 <body>
 <a id="top"></a>
@@ -91,7 +100,7 @@
         </div>
     </div>
     <div class="scrollitem" id="registration">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdlT2j5VZ47c87a6ZGCckA0iQjjjdONU17BjweiW4MXwszFug/viewform?embedded=true" width="100%" max-width="640" height="1658" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdlT2j5VZ47c87a6ZGCckA0iQjjjdONU17BjweiW4MXwszFug/viewform?embedded=true" width="100%" max-width="640" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" id="regformiframe" onLoad="resizeIFrame('regformiframe');"></iframe>
     </div>
     <div class="scrollitem" id="moreInfo">
         <img id="med_polar_pic" src="assets/photo.jpg" alt="(・ω<)">
@@ -127,5 +136,5 @@
 </div>
 
 <script type="text/javascript" src="power.js"></script>
-<p class = "footerCopy">v0.8.2, 2019</p>
+<p class = "footerCopy">v0.8.3, 2019</p>
 </body>
