@@ -27,21 +27,6 @@
     animal_element.classList.add("bounce");
     // powerUp();
     }
-    function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    } 
-
-    function resizeIFrame( frameName ) {
-        var iFrame = document.getElementById( frameName );
-        // iFrame.width  = iFrame.contentWindow.document.body.scrollWidth;
-        // iFrame.height = iFrame.contentWindow.document.body.Height;
-        console.log(iFrame.contentWindow.document.body.scrollHeight);
-        console.log(iFrame.contentWindow.document.body.offsetHeight);
-        console.log(iFrame.contentWindow.document.documentElement.scrollHeight);
-        console.log(iFrame.contentWindow.document.documentElement.offsetHeight);
-    }
-
     </script> 
 </head>
 <body>
@@ -91,8 +76,8 @@
             </div>
 
             <p>時間：Dec 28, 2019</p>
-            <p>11:30</p>
-            <p>12:15</p>
+            <p>12:00 open</p>
+            <p>12:35 ceremony start</p>
             <p>地點：台北諾富特華航桃園機場飯店</p>
             <p>Noon, Dec 28, 2019</p>
             <p>@ Novotel Taipei, Taoyuan International Airport, Taiwan</p>
@@ -100,7 +85,7 @@
         </div>
     </div>
     <div class="scrollitem" id="registration">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdlT2j5VZ47c87a6ZGCckA0iQjjjdONU17BjweiW4MXwszFug/viewform?embedded=true" width="100%" max-width="640" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" id="regformiframe" onLoad="resizeIFrame('regformiframe');"></iframe>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdlT2j5VZ47c87a6ZGCckA0iQjjjdONU17BjweiW4MXwszFug/viewform?embedded=true" width="100%" height="1680" max-width="640" frameborder="0" marginheight="0" marginwidth="0"></iframe>
     </div>
     <div class="scrollitem" id="moreInfo">
         <img id="med_polar_pic" src="assets/photo.jpg" alt="(・ω<)">
@@ -110,19 +95,18 @@
             <p>台北車站 -(搭乘捷運機場線)-> 機場旅館站 (~2小時)</p>
             <p>台北車站 -(搭乘高鐵)-> 高鐵桃園站 -(步行)-> 機場捷運桃園站 -(搭乘捷運機場線)-> 機場旅館站 (~1小時)</p>
             <p>宴會用餐期間可免費停車 <a href="https://www.novoteltaipeiairport.com/tw/location.asp">飯店交通資訊</a></p>            
-            
 
             <h3>我還不確定能不能參加怎麼辦？</h3>
-            <p>請先填表，隨時能修改，一個月前我們會敲來確認</p>
+            <p>請先填表，隨時能修改，一個月前我們會再確認。</p>
 
             <h3>我人在美國，請開美國場次</h3>
-            <p>一、二月在加州（灣區）、 德州（休士頓）會有飯局。沒典禮，有喜餅。</p>
+            <p>一、二月在加州（灣區）、 德州（休士頓）會有飯局。沒典禮，但是會有小小的喜餅。</p>
 
             <h3>有喜帖嗎？</h3>
             <p>這就是喜帖了(=_=")</p>
 
             <h3>還來得及報名嗎？</h3>
-            <p>請儘早報名，但歡迎最後一秒，臨時衝一發。來來來</p>
+            <p>請儘早報名，線上表單婚禮兩周前就會收單。如果婚禮前兩周有任何變動(突然能參加或是突然不能參加)，請直接跟智堯或佳宜本人聯繫！</p>
 
             <h3>怎麼聯絡你們？</h3>
             <p>臉書 / andyisverydumb@gmail.com</p>
@@ -136,5 +120,5 @@
 </div>
 
 <script type="text/javascript" src="power.js"></script>
-<p class = "footerCopy">v0.8.3, 2019</p>
+<p class = "footerCopy">v0.8.4, 2019</p>
 </body>
