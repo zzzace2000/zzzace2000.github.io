@@ -3,6 +3,7 @@ html, body {
     font-family: 'Coming Soon', cursive;
     margin:0px;
     /*font-family: 'Noto Sans TC', sans-serif;*/
+ background-image: url("assets/paper.png");
 }
 .scrollitem {
      margin-left: auto;
@@ -89,7 +90,7 @@ img {
   /*Create Background navbarBackBox*/
   .navbarBackBox {
     pointer-events: auto; /*cover up events: none;*/
-    background-color: white;
+    background-color: rgba(255,255,255,1);
     padding: 3px;
   }
   .navbarGradientBox {
