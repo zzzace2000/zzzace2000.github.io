@@ -19,6 +19,32 @@ p {
     color: green;
 }
 
+#about p {
+    color: darkgreen;
+}
+
+.stars {
+    margin-bottom: 1.7em;
+}
+
+#parents {
+    float: center;
+    width: 200px;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    line-height: 40%;
+
+}
+
+#grm_parents {
+    float: left;
+}
+
+#brd_parents {
+    float: right;
+}       
 /*
 
 img:active {
