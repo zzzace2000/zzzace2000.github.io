@@ -164,6 +164,12 @@ img {
     .noScrollHeader {
         position: relative;
     }
+        #inlineHeaderImg {
+        display: none;
+    }
+    #aboveHeaderImg {
+        display: none;
+    }
 }
 
 #aboveHeaderImg {
