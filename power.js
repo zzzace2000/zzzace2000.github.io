@@ -42,7 +42,9 @@ var particle_power = 120;
   function onTouchMove(e) {
     if( e.touches.length > 0 ) {
       for( var i = 0; i < e.touches.length; i++ ) {
-        addParticle( e.touches[i].clientX, e.touches[i].clientY, possibleColors[Math.floor(Math.random()*possibleColors.length)]);
+        addParticle( e.touches[i].clientX - document.body.getBoundingClientRect().left,
+                     e.touches[i].clientY - document.body.getBoundingClientRect().top, 
+                     possibleColors[Math.floor(Math.random()*possibleColors.length)]);
       }
     }
   }
@@ -52,7 +54,7 @@ var particle_power = 120;
     cursor.y = e.clientY;
     // console.log( 'see mouse moved' )
     if (power_level == 0) {
-      addParticle(  cursor.x,
+      addParticle(  cursor.x - document.body.getBoundingClientRect().left,
                     cursor.y - document.body.getBoundingClientRect().top,
                     possibleColors[Math.floor(Math.random()*possibleColors.length)]);
     }
