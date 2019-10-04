@@ -29,9 +29,16 @@
     animal_element.classList.add("bounce");
     // powerUp();
     }
+    function init()
+    {
+        animal_react();
+    }
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
     </script> 
 </head>
-<body>
+<body onload="init()">
 <a id="top"></a>
 <audio id="pika1" src="assets/pika_raw_1.wav" ></audio>
 <audio id="pika2" src="assets/pika_raw_2.wav" ></audio>
@@ -123,5 +130,5 @@
 
 <script type="text/javascript" src="power.js"></script>
 
-<p class = "footerCopy">v0.9.3, 2019</p>
+<p class = "footerCopy">v0.9.4, 2019</p>
 </body>
