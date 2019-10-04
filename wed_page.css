@@ -113,6 +113,7 @@ img {
       width: 100%;
       text-align: center;
       pointer-events: none;
+      -webkit-transform: translateZ(0);
   }
   /*Create Background navbarBackBox*/
   .navbarBackBox {
