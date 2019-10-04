@@ -108,6 +108,7 @@ img {
 /*Nav Bar Stuff*/
   .noScrollHeader {
       position: sticky;
+      position: -webkit-sticky;
       top: 0;
       width: 100%;
       text-align: center;
@@ -163,12 +164,6 @@ img {
 @media only screen and (max-height: 600px) {
     .noScrollHeader {
         position: relative;
-    }
-        #inlineHeaderImg {
-        display: none;
-    }
-    #aboveHeaderImg {
-        display: none;
     }
 }
 
