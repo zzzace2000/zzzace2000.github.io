@@ -1,0 +1,220 @@
+html, body {
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Coming Soon', cursive;
+    margin:0px;
+    /*font-family: 'Noto Sans TC', sans-serif;*/
+ background-image: url("assets/paper.png");
+}
+.scrollitem {
+     margin-left: auto;
+     margin-right: auto;
+     max-width:660;
+}
+.CNtextbox {
+    text-align:center;
+    font-family: 'Noto Sans TC', sans-serif;   
+}
+
+p {
+    color: green;
+}
+
+#about p {
+    color: darkgreen;
+}
+
+.stars {
+    margin-bottom: 1.7em;
+}
+
+#parents {
+    float: center;
+    width: 200px;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    line-height: 40%;
+
+}
+
+#grm_parents {
+    float: left;
+}
+
+#brd_parents {
+    float: right;
+}       
+/*
+
+img:active {
+  animation: bounce 0.5s;
+  animation-iteration-count: infinite;
+}
+*/
+
+/*debug borders*/
+/*.scrollcontainer {
+  border-style: solid;
+  border-width: 5px;
+  border-color: red;
+  background: red;
+}
+.scrollitem {
+  border-style: solid;
+  border-width: 3px;
+  border-color: blue; 
+}
+.textbox {
+  border-style: solid;
+  border-width: 1px;
+  border-color: green;  
+}
+*/
+.leftfield {
+  border-style: solid;
+  border-width: 1px;
+  border-color: green;
+  height: 100%;
+  float: left;
+}
+.rightfield {
+  border-style: solid;
+  border-width: 1px;
+  border-color: green;
+  height: 100%;
+  float: right;
+}
+
+/*Image Sizing*/
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#top_fa_pic {
+  width: 100%;
+}
+
+#med_polar_pic {
+  width: 40%;
+}
+
+#foot_zhong_pic {
+  width: 40%;
+}
+
+/*Nav Bar Stuff*/
+  .noScrollHeader {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      width: 100%;
+      text-align: center;
+      pointer-events: none;
+      -webkit-transform: translateZ(0);
+  }
+  /*Create Background navbarBackBox*/
+  .navbarBackBox {
+    pointer-events: auto; /*cover up events: none;*/
+    background-color: rgba(255,255,255,1);
+    padding: 3px;
+  }
+  .navbarGradientBox {
+    background-image: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0));
+    pointer-events: none;
+    height: 5vh;
+    /*max-height:50;*/
+  }
+  #inlineHeaderImg {
+    float:left;
+    display: block;
+    height: 15vh;
+   /*max-height: 150;*/
+  }
+  .navbar {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    white-space:nowrap;
+  }
+  .nav-item {
+    display: inline-block;
+    z-index:-1;
+    vertical-align: bottom;
+  }
+  .nav-item a {
+    display: block;
+    text-align: center;
+    padding: 2px 2px;
+  }
+
+  .nav-item a:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+
+/*scroller adjustment for fixed header*/
+.scrollitem {
+  padding-top: 15vh;
+  margin-top: -15vh;
+}
+
+@media only screen and (max-height: 600px) {
+    .noScrollHeader {
+        position: relative;
+    }
+}
+
+#aboveHeaderImg {
+    height: 12vh;
+    display: none;
+}
+@media only screen and (max-width: 550px) {
+    #inlineHeaderImg {
+        display: none;
+    }
+    #aboveHeaderImg {
+        display: block;
+    }
+}
+
+.bounce {
+  animation: bounce 0.5s;
+  animation-iteration-count: 1;
+}
+
+
+.footerCopy {
+  color: gray;
+  font-size: 8;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+@keyframes bounce {
+  0%  { transform: scale(1); }
+  10% { transform: scale(1, 0.75) }
+  20% { transform: scale(0.85, 0.85) }
+  30% { transform: scale(0.8, 1) }
+  40% { transform: scale(0.8, 1.07) }
+  50% { transform: scale(0.85, 1.1) }
+  60% { transform: scale(1, 1.07) }
+  70% { transform: scale(1, 1) }/*
+  80% { transform: scale(0.9, 0.9) }
+  90% { transform: scale(0.9, 0.9) }*/
+  100% { transform: scale(1, 1) }
+}
