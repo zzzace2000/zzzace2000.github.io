@@ -44,7 +44,13 @@ p {
 
 #brd_parents {
     float: right;
-}       
+}
+  
+.RedWarn p {
+    color: red;
+    font-weight: bold;
+    font-size: 250%;
+}     
 /*
 
 img:active {
