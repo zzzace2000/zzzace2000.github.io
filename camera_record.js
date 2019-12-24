@@ -48,8 +48,6 @@ function surfaceDownload(){ //created from recordedBlobs, using globals as file 
     a.style.display = 'none';
     a.href = url;
 
-    alert(download_file_name);
-
     a.download = download_file_name;
     document.body.appendChild(a);
     a.click();
