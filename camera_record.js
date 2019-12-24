@@ -27,12 +27,13 @@ let sourceBuffer;
 
 
 // public functions
-function startPlaybackLoop(){ //on recordedVideo, from recordedBlobs
+function startPlaybackOnce(){ //on recordedVideo, from recordedBlobs
     const superBuffer = new Blob(recordedBlobs, {type: 'video/webm'});
     recordedVideo.src = null;
     recordedVideo.srcObject = null;
     recordedVideo.src = window.URL.createObjectURL(superBuffer);
     recordedVideo.controls = true;
+    recordedVideo.loop = false;
     recordedVideo.play();
 }
 
@@ -431,7 +432,7 @@ function openSaveOverlay(){
         finishedButton.className += " grey";    
     }
     finishedButton.disabled = true;
-    startPlaybackLoop();
+    startPlaybackOnce();
     download_file_name = r_phrase_id + '_' + generateId(8)+'.webm';
 }
 
