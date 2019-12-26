@@ -205,22 +205,20 @@ function dataCallback(data) {
 
 function spawnPhrase(category_id, phrase_id, phrase_text) {
     if (['Yeh', 'Yao', 'Both', 'Bless'].indexOf(category_id) >= 0) { // is one of the four
-        var container = document.getElementById(category_id);
-        var newButton = document.createElement('button');
         if (phrase_id == 'Free'){
-            newButton.setAttribute("class", "selectablePhrase Free");    
+            // newButton.setAttribute("class", "selectablePhrase Free");
+            console.log("skipping free, becuase already added in html (sorry for hack)")
         }
         else {
-            newButton.setAttribute("class", "selectablePhrase");
+          var container = document.getElementById(category_id);
+          var newButton = document.createElement('button');
+
+          newButton.setAttribute("class", "selectablePhrase");
+          newButton.setAttribute("id", category_id+'_'+phrase_id)
+          newButton.setAttribute("onclick", 'selectPhrase(this)');
+          newButton.innerText = phrase_text;
+          container.appendChild(newButton); 
         }
-        newButton.setAttribute("id", category_id+'_'+phrase_id)
-        newButton.setAttribute("onclick", 'selectPhrase(this)');
-        newButton.innerText = phrase_text;
-        container.appendChild(newButton);
-
-
-
-
     }
 }
 
@@ -293,6 +291,25 @@ function clicked_start_record() {
     recordText.disabled = true;
     recordButton.disabled = true;
     recursiveCountdown(3, start_record_actions)
+}
+
+document.body.onkeyup = function(e){
+    if(e.keyCode == 32){
+      console.log("spacebar pressed")
+      if (recordButton.disabled == false && 
+          getComputedStyle(document.getElementById("recorder_prompt")).display != "none" &&  
+          getComputedStyle(save_overlay).display == "none"){ 
+        console.log("activating");
+        if (state_recording == false ) {
+          clicked_start_record();
+        } else {
+          clicked_stop_record();
+        }
+      }
+      else {
+        console.log("record button not enabled");
+      }
+    }
 }
 
 function start_record_actions(){
@@ -379,6 +396,10 @@ function openTab(tabId){
     ///// grab the category id straight from tab
     r_category_text = document.getElementById(tabId).getElementsByClassName("categoryText")[0].innerText
     r_category_id = tabId
+
+    //// Automatically select the "Free phrase"
+    var freeTab = document.getElementById(tabId + "_Free" )
+    selectPhrase(freeTab);
 }
 
 function resetTabs(event){
@@ -426,8 +447,9 @@ function writePromptRecorder(){
 
 
 /////////////////////////// Overlay Stuff
+const save_overlay = document.getElementById("check_overlay")
 function openSaveOverlay(){
-    document.getElementById("check_overlay").style.display = "block";
+    save_overlay.style.display = "block";
     if( !finishedButton.classList.contains('grey')){
         finishedButton.className += " grey";    
     }
@@ -437,7 +459,7 @@ function openSaveOverlay(){
 }
 
 function closeSaveOverlay(){
-    document.getElementById("check_overlay").style.display = "none";
+    save_overlay.style.display = "none";
     stopPlaybackLoop();
 }
 
