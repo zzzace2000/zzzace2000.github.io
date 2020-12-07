@@ -30,7 +30,15 @@ html, body {
 
 
 
-
+/*Init Button*/
+#init {
+  position: relative;
+    width: 85%;
+    height: 30%;
+    top: 20%;
+    margin-left:auto;
+    margin-right:auto;
+}
 
 
 
@@ -84,8 +92,8 @@ html, body {
     vertical-align: middle;
 }
 #startstoptext {
-    height: 4vw;
-    font-size: 2vw;
+    height: 8vw;
+    font-size: 5vw;
     vertical-align: middle;
 }
 
@@ -131,7 +139,7 @@ html, body {
   height: 100%;
 
   padding: 10px 12px; /*padding around text*/
-  font-size: 1.7vw;
+  font-size: 3vw;
 
   transition: 0.3s;
 }
