@@ -30,17 +30,6 @@ html, body {
 
 
 
-/*Init Button*/
-#init {
-  position: relative;
-    width: 85%;
-    height: 30%;
-    top: 20%;
-    margin-left:auto;
-    margin-right:auto;
-}
-
-
 
 
 
@@ -222,7 +211,7 @@ html, body {
 }
 
 #init_overlay button{
-      font-size: 3vw;
+      font-size: 15vw;
 }
 
 .overlay-content {
